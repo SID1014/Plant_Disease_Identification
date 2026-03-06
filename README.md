@@ -87,7 +87,7 @@ streamlit run main.py
 ```
 Plant_Disease_Identification/
 │
-├── main.py                          # Streamlit app
+├── app.py                          # Streamlit app
 ├── trained_plant_disease_model.keras # Trained CNN model
 ├── requirements.txt                 # Dependencies
 └── README.md
