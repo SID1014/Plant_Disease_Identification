@@ -27,8 +27,6 @@ from PIL import Image
 
 #Main Page
 if(app_mode == "Home"):
-    st.markdown("<h1 style = 'text-align: center;'>Plant Disease Detection System for sustainable Agriculture",unsafe_allow_html=True)
-
     st.title("Plant Disease Detection System")
     st.subheader("For Sustainable Agriculture")
 
