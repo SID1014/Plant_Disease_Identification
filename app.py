@@ -29,6 +29,64 @@ from PIL import Image
 if(app_mode == "Home"):
     st.markdown("<h1 style = 'text-align: center;'>Plant Disease Detection System for sustainable Agriculture",unsafe_allow_html=True)
 
+    st.title("Plant Disease Detection System")
+    st.subheader("For Sustainable Agriculture")
+
+    st.markdown("""
+    Plant diseases pose a significant threat to agricultural productivity. 
+    Traditional identification methods are time-consuming and require expert 
+    knowledge. This app uses a **Convolutional Neural Network (CNN)** to 
+    automatically detect diseases from leaf images — helping farmers make 
+    faster, more accurate decisions.
+    """)
+
+    # Key stats in columns
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        st.metric("Training Accuracy", "98.06%")
+    with col2:
+        st.metric("Validation Accuracy", "94.47%")
+    with col3:
+        st.metric("Disease Classes", "38")
+
+    st.markdown("---")
+
+    # How to use
+    st.subheader("How to Use")
+    st.markdown("""
+    1. Navigate to **Disease Recognition** in the sidebar
+    2. Upload a leaf image (JPG/PNG)
+    3. Click **Predict** to get instant disease diagnosis
+    """)
+
+    st.markdown("---")
+
+    # Supported crops
+    st.subheader("What the Model Can Detect")
+    st.markdown("""
+    Trained on the **PlantVillage Dataset (50,000+ images)** across 38 disease 
+    categories including:
+    - Apple — Scab, Black Rot, Cedar Rust
+    - Tomato — Bacterial Spot, Early Blight, Late Blight, Leaf Mold
+    - Potato — Early Blight, Late Blight
+    - Corn — Common Rust, Northern Leaf Blight
+    - Grape, Pepper, Strawberry, and more...
+    """)
+
+    st.markdown("---")
+
+    # Tech stack
+    st.subheader("Built With")
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        st.markdown("**Model**\nCNN (TensorFlow/Keras)")
+    with col2:
+        st.markdown("**Interface**\nStreamlit")
+    with col3:
+        st.markdown("**Dataset**\nPlantVillage (Kaggle)")
+
+    st.markdown("---")
+    st.caption("Built during AICTE AI/ML Internship — TechSaksham (Microsoft & SAP CSR Initiative)")
 
 
 elif(app_mode == "Disease Recognition"):
